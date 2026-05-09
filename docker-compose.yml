@@ -64,6 +64,17 @@ services:
     networks:
       - chat_net
 
+  app:
+    image: mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye
+    volumes:
+      - .:/workspaces/Chatz:cached
+    networks:
+      - chat_net
+    depends_on:
+      - postgres
+      - redis
+      - kafka
+
 volumes:
   postgres_data:
   redis_data:

@@ -1,14 +1,8 @@
 {
   "name": "Chatz Microservices",
   "dockerComposeFile": "../docker-compose.yml",
-  "service": "postgres",
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-  "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "20"
-    },
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
-  },
+  "service": "app",
+  "workspaceFolder": "/workspaces/Chatz",
   "forwardPorts": [3000, 4001, 4002, 4003, 5432, 6379, 9092],
   "portsAttributes": {
     "3000": { "label": "Client", "onAutoForward": "notify" },
